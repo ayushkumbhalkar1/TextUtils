@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function About() {
+export default function About({ showAlert }) {
   const [myStyle, setMyStyle] = useState({
     color: "black",
     backgroundColor: "white",
@@ -14,12 +14,14 @@ export default function About() {
         border: "1px solid white",
       });
       setBtnText("Enable Light Mode");
+      showAlert("dark mode enable!", "success");
     } else {
       setMyStyle({
         color: "black",
         backgroundColor: "white",
       });
       setBtnText("Enable Dark Mode");
+      showAlert("light mode enable!", "success");
     }
   };
   return (
@@ -52,7 +54,7 @@ export default function About() {
             <div className="accordion-body" style={myStyle}>
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
+              className that we use to style each element. These className
               control the overall appearance, as well as the showing and hiding
               via CSS transitions. You can modify any of this with custom CSS or
               overriding our default variables. It's also worth noting that just
@@ -83,7 +85,7 @@ export default function About() {
             <div className="accordion-body" style={myStyle}>
               <strong>This is the second item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
+              className that we use to style each element. These className
               control the overall appearance, as well as the showing and hiding
               via CSS transitions. You can modify any of this with custom CSS or
               overriding our default variables. It's also worth noting that just
@@ -114,7 +116,7 @@ export default function About() {
             <div className="accordion-body" style={myStyle}>
               <strong>This is the third item's accordion body.</strong> It is
               hidden by default, until the collapse plugin adds the appropriate
-              classNamees that we use to style each element. These classNamees
+              className that we use to style each element. These className
               control the overall appearance, as well as the showing and hiding
               via CSS transitions. You can modify any of this with custom CSS or
               overriding our default variables. It's also worth noting that just

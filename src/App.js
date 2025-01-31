@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./App.css";
 import Alert from "./components/Alert";
-import About from "./components/About";
+// import About from "./components/About";
 import First from "./components/First";
 import Second from "./components/Second";
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [alert, setAlert] = useState(null);
@@ -18,15 +19,10 @@ function App() {
   };
   return (
     <>
-      <First title="TextUtils" Link="About" showAlert={showAlert} />
+      <First title="TextUtils" About="About" showAlert={showAlert} />
       <Alert alert={alert} />
-      <div className="container my-3">
-        <Second
-          heading="Enter the text to analyze below"
-          showAlert={showAlert}
-        />
-        <About />
-      </div>
+      <Second heading="Enter the text to analyze below" showAlert={showAlert} />
+      {/* <About showAlert={showAlert} /> */}
     </>
   );
 }

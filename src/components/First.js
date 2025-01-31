@@ -1,6 +1,7 @@
 import React from "react";
+// import { Link } from "react-router-dom";
 
-export default function First({ title = "Enter title", Link, showAlert }) {
+export default function First({ title = "Enter title", About, showAlert }) {
   const clickDarkMode = () => {
     showAlert("this feature not available!", "warning");
   };
@@ -31,7 +32,7 @@ export default function First({ title = "Enter title", Link, showAlert }) {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  {Link}
+                  {About}
                 </a>
               </li>
               {/* <li className="nav-item dropdown">
